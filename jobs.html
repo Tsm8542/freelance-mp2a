@@ -14,45 +14,46 @@
   <header class="navbar">
     <div class="container">
       <h1 class="logo">FreelanceConnect</h1>
-      <button class="menu-toggle" id="menuToggle">&#9776;</button>
-        <nav id="navMenu">
+      <nav>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="jobs.html">Browse Jobs</a></li>
+          <li><a href="jobs.html" class="active">Browse Jobs</a></li>
           <li><a href="post-job.html">Post a Job</a></li>
           <li><a href="login.html">Login</a></li>
           <li><a href="signup.html">Signup</a></li>
         </ul>
-        </nav>
+      </nav>
     </div>
   </header>
 
-  <!-- Contact Form -->
-  <section class="contact">
+  <!-- Job Listings -->
+  <section class="jobs-section">
     <div class="container">
-      <h2>Contact Us</h2>
-      <p>Got a question or proposal? Let’s talk.</p>
-      <form id="contactForm" novalidate>
-        <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" placeholder="John Doe" required>
-            <small class="error-message" id="nameError"></small>
-        </div>
+      <h2 class="section-title">Available Projects</h2>
 
-        <div class="form-group">
-        <label for="email">Email Address</label>
-        <input type="email" id="email" placeholder="you@example.com" required>
-        <small class="error-message" id="emailError"></small>
-        </div>
+      <div class="job-card">
+        <h3>Website Redesign for Startup</h3>
+        <p><strong>Budget:</strong> $500 - $1000</p>
+        <p><strong>Skills:</strong> HTML, CSS, JS, UX</p>
+        <p>Looking for a front-end developer to redesign our landing page and optimize mobile responsiveness.</p>
+        <button class="btn-secondary">Apply Now</button>
+      </div>
 
-        <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" rows="5" placeholder="Write your message here..." required></textarea>
-        <small class="error-message" id="messageError"></small>
-        </div>
+      <div class="job-card">
+        <h3>Mobile App for Food Delivery</h3>
+        <p><strong>Budget:</strong> $2000+</p>
+        <p><strong>Skills:</strong> React Native, Firebase</p>
+        <p>Build a cross-platform food delivery app with real-time tracking and payment integration.</p>
+        <button class="btn-secondary">Apply Now</button>
+      </div>
 
-        <button type="submit" class="btn-primary">Send Message</button>
-      </form>
+      <div class="job-card">
+        <h3>Logo & Brand Identity Design</h3>
+        <p><strong>Budget:</strong> $300</p>
+        <p><strong>Skills:</strong> Illustrator, Branding</p>
+        <p>Create a unique logo and branding kit for a new coffee chain targeting Gen Z.</p>
+        <button class="btn-secondary">Apply Now</button>
+      </div>
     </div>
   </section>
 
@@ -67,7 +68,5 @@
         </div>
     </div>
 </footer>
-
-  <script src="js/main.js"></script>
 </body>
 </html>

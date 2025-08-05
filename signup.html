@@ -14,8 +14,7 @@
   <header class="navbar">
     <div class="container">
       <h1 class="logo">FreelanceConnect</h1>
-      <button class="menu-toggle" id="menuToggle">&#9776;</button>
-        <nav id="navMenu">
+      <nav>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="jobs.html">Browse Jobs</a></li>
@@ -23,35 +22,38 @@
           <li><a href="login.html">Login</a></li>
           <li><a href="signup.html">Signup</a></li>
         </ul>
-        </nav>
+      </nav>
     </div>
   </header>
 
-  <!-- Contact Form -->
-  <section class="contact">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <p>Got a question or proposal? Let’s talk.</p>
-      <form id="contactForm" novalidate>
-        <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" placeholder="John Doe" required>
-            <small class="error-message" id="nameError"></small>
-        </div>
+  <!-- Signup Form -->
+  <section class="form-section">
+    <div class="form-container">
+      <h2>Create an Account</h2>
+      <form>
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" required />
 
-        <div class="form-group">
-        <label for="email">Email Address</label>
-        <input type="email" id="email" placeholder="you@example.com" required>
-        <small class="error-message" id="emailError"></small>
-        </div>
+        <label for="email">Email</label>
+        <input type="email" id="email" required />
 
-        <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" rows="5" placeholder="Write your message here..." required></textarea>
-        <small class="error-message" id="messageError"></small>
-        </div>
+        <label for="role">I am a</label>
+        <select id="role" required>
+          <option value="">-- Select --</option>
+          <option value="freelancer">Freelancer</option>
+          <option value="recruiter">Recruiter</option>
+        </select>
 
-        <button type="submit" class="btn-primary">Send Message</button>
+        <label for="password">Password</label>
+        <input type="password" id="password" required />
+
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" required />
+
+        <button type="submit" class="btn-primary">Sign Up</button>
+        <p class="form-footer">
+          Already have an account? <a href="login.html">Login</a>
+        </p>
       </form>
     </div>
   </section>
@@ -67,7 +69,5 @@
         </div>
     </div>
 </footer>
-
-  <script src="js/main.js"></script>
 </body>
 </html>
