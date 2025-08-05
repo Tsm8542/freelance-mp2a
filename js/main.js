@@ -89,3 +89,65 @@ if (searchInput) {
     });
   });
 }
+
+// Dark Mode Toggle
+const themeToggle = document.getElementById('theme-toggle');
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+
+    // Optional: change icon
+    const icon = themeToggle.querySelector('i');
+    if (document.body.classList.contains('dark-mode')) {
+      icon.classList.replace('fa-moon', 'fa-sun');
+    } else {
+      icon.classList.replace('fa-sun', 'fa-moon');
+    }
+  });
+}
+
+// Back to Top Button Logic
+const backToTopBtn = document.getElementById('backToTopBtn');
+
+window.onscroll = function () {
+  if (backToTopBtn) {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  }
+};
+
+if (backToTopBtn) {
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+// Job Search & Filter
+const searchInputJob = document.getElementById('searchInput');
+const categoryFilter = document.getElementById('categoryFilter');
+const jobCards = document.querySelectorAll('.job-card');
+
+function filterJobs() {
+  const searchTerm = searchInputJob?.value.toLowerCase() || '';
+  const selectedCategory = categoryFilter?.value;
+
+  jobCards.forEach(card => {
+    const title = card.querySelector('h3')?.textContent.toLowerCase() || '';
+    const category = card.dataset.category || '';
+
+    const matchesSearch = title.includes(searchTerm);
+    const matchesCategory = !selectedCategory || category === selectedCategory;
+
+    if (matchesSearch && matchesCategory) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+
+searchInputJob?.addEventListener('input', filterJobs);
+categoryFilter?.addEventListener('change', filterJobs);

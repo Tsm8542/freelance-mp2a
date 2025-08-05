@@ -16,11 +16,16 @@
       <h1 class="logo">FreelanceConnect</h1>
       <nav>
         <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="jobs.html" class="active">Browse Jobs</a></li>
-          <li><a href="post-job.html">Post a Job</a></li>
-          <li><a href="login.html">Login</a></li>
-          <li><a href="signup.html">Signup</a></li>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="jobs.html"><i class="fas fa-briefcase"></i> Browse Jobs</a></li>
+            <li><a href="post-job.html"><i class="fas fa-plus"></i> Post a Job</a></li>
+            <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+            <li><a href="signup.html"><i class="fas fa-user-plus"></i> Signup</a></li>
+            <li>
+              <button id="theme-toggle" class="btn-secondary" title="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+              </button>
+            </li>
         </ul>
       </nav>
     </div>
@@ -30,29 +35,43 @@
   <section class="jobs-section">
     <div class="container">
       <h2 class="section-title">Available Projects</h2>
+      <div class="job-filters">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search jobs by title, keyword, etc."
+        />
+        <select id="categoryFilter">
+          <option value="">All Categories</option>
+          <option value="design">Design</option>
+          <option value="development">Development</option>
+          <option value="writing">Writing</option>
+          <option value="marketing">Marketing</option>
+        </select>
+      </div>
 
       <div class="job-card">
         <h3>Website Redesign for Startup</h3>
         <p><strong>Budget:</strong> $500 - $1000</p>
         <p><strong>Skills:</strong> HTML, CSS, JS, UX</p>
         <p>Looking for a front-end developer to redesign our landing page and optimize mobile responsiveness.</p>
-        <button class="btn-secondary">Apply Now</button>
+        <button class="btn-secondary"><i class="fas fa-paper-plane"></i> Apply Now</button>
       </div>
 
-      <div class="job-card">
+      <div class="job-card" data-category="development">
         <h3>Mobile App for Food Delivery</h3>
         <p><strong>Budget:</strong> $2000+</p>
         <p><strong>Skills:</strong> React Native, Firebase</p>
         <p>Build a cross-platform food delivery app with real-time tracking and payment integration.</p>
-        <button class="btn-secondary">Apply Now</button>
+        <button class="btn-secondary"><i class="fas fa-paper-plane"></i> Apply Now</button>
       </div>
 
-      <div class="job-card">
+      <div class="job-card" data-category="design">
         <h3>Logo & Brand Identity Design</h3>
         <p><strong>Budget:</strong> $300</p>
         <p><strong>Skills:</strong> Illustrator, Branding</p>
         <p>Create a unique logo and branding kit for a new coffee chain targeting Gen Z.</p>
-        <button class="btn-secondary">Apply Now</button>
+        <button class="btn-secondary"><i class="fas fa-paper-plane"></i> Apply Now</button>
       </div>
     </div>
   </section>
@@ -68,5 +87,9 @@
         </div>
     </div>
 </footer>
+<button id="backToTopBtn" title="Go to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+<script src="js/main.js"></script>
 </body>
 </html>

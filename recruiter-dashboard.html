@@ -16,11 +16,10 @@
       <h1 class="logo">FreelanceConnect</h1>
       <nav>
         <ul class="nav-links">
-            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="jobs.html"><i class="fas fa-briefcase"></i> Browse Jobs</a></li>
-            <li><a href="post-job.html"><i class="fas fa-plus"></i> Post a Job</a></li>
-            <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
-            <li><a href="signup.html"><i class="fas fa-user-plus"></i> Signup</a></li>
+          <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+          <li><a href="post-job.html"><i class="fas fa-plus"></i>Post a Job</a></li>
+          <li><a href="recruiter-dashboard.html" class="active">Dashboard</a></li>
+          <li><a href="login.html"><i class="fas fa-sign-in-alt"></i>Logout</a></li>
             <li>
               <button id="theme-toggle" class="btn-secondary" title="Toggle dark mode">
                 <i class="fas fa-moon"></i>
@@ -31,25 +30,42 @@
     </div>
   </header>
 
-  <!-- Post Job Form -->
-  <section class="form-section">
-    <div class="form-container">
-      <h2>Post a Job</h2>
-      <form>
-        <label for="title">Job Title</label>
-        <input type="text" id="title" required />
+  <!-- Dashboard Content -->
+  <section class="dashboard">
+    <div class="container">
+      <h2>Welcome, Maya!</h2>
 
-        <label for="budget">Budget</label>
-        <input type="text" id="budget" placeholder="$500 - $1000" required />
+      <div class="dashboard-section">
+        <h3>Your Job Posts</h3>
+        <ul class="dashboard-list">
+          <li>
+            <strong>Mobile App for Food Delivery</strong>
+            <p>Applicants: 12</p>
+            <button class="btn-secondary">View Applicants</button>
+            <button class="btn-secondary"><i class="fas fa-edit"></i> Edit</button>
+          </li>
+          <li>
+            <strong>Logo & Brand Identity</strong>
+            <p>Applicants: 7</p>
+            <button class="btn-secondary">View Applicants</button>
+            <button class="btn-secondary"><i class="fas fa-edit"></i> Edit</button>
+          </li>
+        </ul>
+      </div>
 
-        <label for="skills">Required Skills</label>
-        <input type="text" id="skills" placeholder="e.g. HTML, CSS, React" required />
-
-        <label for="description">Project Description</label>
-        <textarea id="description" rows="5" required></textarea>
-
-        <button type="submit" class="btn-primary">Submit Job</button>
-      </form>
+      <div class="dashboard-section">
+        <h3>Top Applicants</h3>
+        <ul class="dashboard-list">
+          <li>
+            <strong>Priya Sharma</strong> – UX Designer
+            <p>Applied for: Website Redesign</p>
+          </li>
+          <li>
+            <strong>John Doe</strong> – Full Stack Developer
+            <p>Applied for: Mobile App for Food Delivery</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 

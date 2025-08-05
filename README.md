@@ -20,6 +20,11 @@ This project was created as a mini project with the goal of delivering a simple 
 - Contact form with client-side validation
 - Custom 404 error page
 - Footer with social media links
+- Dark Mode Toggle – Easily switch between light and dark themes
+- Back to Top Button – Smooth scroll button appears on scroll
+- Job Search & Filter – Search by keyword and filter jobs by category on the frontend
+- Font Awesome Icons – Professional icon support for buttons and navbar
+- Improved Responsiveness – Mobile-friendly layout across all pages
 
 ---
 
@@ -46,12 +51,13 @@ freelance-website/
 
 ---
 
-## 🛠️ Tech Stack
+### 🛠️ Tech Stack
 
 - HTML5
 - CSS3
-- JavaScript (Vanilla)
-- [Font Awesome](https://fontawesome.com) for icons
+- JavaScript (ES6)
+- Font Awesome (CDN)
+
 
 ---
 
